@@ -4,27 +4,38 @@ import java.util.Date;
 
 public class Rental {
     
-    private Date Startingdate, endingDate;
-    private String region, city;
+    private String Startingdate, endingDate;
+    private String region, branch,city;
     private Car car;
-    private Customer customer;
+    private int custID;
     private Manager manager;
 
-    public Rental(Date Startingdate, Date endingDate, String region, String city, Car car, Customer customer, Manager manager) {
+    public Rental(String Startingdate, String endingDate, String region,String branch, String city, Car car, int custID) {
+        this.Startingdate = Startingdate;
+        this.endingDate = endingDate;
+        this.region = region;
+        this.branch=branch;
+        this.city = city;
+        this.car = car;
+        this.custID = custID;
+    }
+    
+    
+    public Rental(String Startingdate, String endingDate, String region, String city, Car car, int custID, Manager manager) {
         this.Startingdate = Startingdate;
         this.endingDate = endingDate;
         this.region = region;
         this.city = city;
         this.car = car;
-        this.customer = customer;
+        this.custID = custID;
         this.manager = manager;
     }
 
-    public void setStartingdate(Date Startingdate) {
+    public void setStartingdate(String Startingdate) {
         this.Startingdate = Startingdate;
     }
 
-    public void setEndingDate(Date endingDate) {
+    public void setEndingDate(String endingDate) {
         this.endingDate = endingDate;
     }
 
@@ -40,19 +51,19 @@ public class Rental {
         this.car = car;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomer(int custID) {
+        this.custID = custID;
     }
 
     public void setManager(Manager manager) {
         this.manager = manager;
     }
 
-    public Date getStartingdate() {
+    public String getStartingdate() {
         return Startingdate;
     }
 
-    public Date getEndingDate() {
+    public String getEndingDate() {
         return endingDate;
     }
 
@@ -68,8 +79,8 @@ public class Rental {
         return car;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomer() {
+        return custID;
     }
 
     public Manager getManager() {
@@ -94,7 +105,7 @@ public class Rental {
 
     @Override
     public String toString() {
-        return "Rental{" + "Startingdate=" + Startingdate + ", endingDate=" + endingDate + ", region=" + region + ", city=" + city + ", car=" + car + ", customer=" + customer + ", manager=" + manager + '}';
+        return "Rental{" + "Startingdate=" + Startingdate + ", endingDate=" + endingDate + ", region=" + region + ", city=" + city + ", car=" + car + ", customer=" + custID + ", manager=" + manager + '}';
     }
     
 
