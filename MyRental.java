@@ -315,3 +315,4 @@ public class MyRental {
     } //End of chooseCar method
 
 }  //End of class
+
