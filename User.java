@@ -1,7 +1,7 @@
 package myrental;
 
 import static myrental.MyRental.input1;
-import static myrental.MyRental.user;
+//import static myrental.MyRental.user;
 
 public class User {
     
@@ -35,7 +35,7 @@ public class User {
 //        return 0;
 //    }
    
-   public static User Signup(){
+ /*  public static User Signup(){
         String Fname,Lname,Username,password,Email;
         System.out.println("enter your first and last name");
         Fname=input1.next();
@@ -49,7 +49,7 @@ public class User {
          
         User newUser=new User();
         return newUser;
-   }
+   }*/
 
     public void setFname(String Fname) {
         this.Fname = Fname;
