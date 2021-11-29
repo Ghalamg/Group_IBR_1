@@ -1,15 +1,23 @@
 package myrental;
 
 import java.util.Date;
+import static myrental.MyRental.input1;
+import static myrental.MyRental.customer;
 
 public class Customer  extends User {
     
-    private String ID,region,city,district,street;
-    private int buildingNo, postNo, CVV;
+    private String region,city,district,street;
+    private int buildingNo, postNo, CVV,ID;
     private long cardNum;
     private Date expireDate;
+    private Rental rental;
 
-    public Customer(String ID, String region, String city, String district, String street, int buildingNo, int postNo, int CVV, long cardNum, Date expireDate) {
+    public Customer() {
+    }
+    
+    
+
+    public Customer(int ID, String region, String city, String district, String street, int buildingNo, int postNo, int CVV, long cardNum, Date expireDate) {
         this.ID = ID;
         this.region = region;
         this.city = city;
@@ -22,7 +30,7 @@ public class Customer  extends User {
         this.expireDate = expireDate;
     }
 
-    public Customer(String ID, String region, String city, String district, String street, int buildingNo, int postNo, int CVV, long cardNum, Date expireDate, String Fname, String Lname, String UserName, String password, String Email) {
+    public Customer(int ID, String region, String city, String district, String street, int buildingNo, int postNo, int CVV, long cardNum, Date expireDate, String Fname, String Lname, String UserName, String password, String Email) {
         super(Fname, Lname, UserName, password, Email);
         this.ID = ID;
         this.region = region;
@@ -36,7 +44,17 @@ public class Customer  extends User {
         this.expireDate = expireDate;
     }
 
-    public String getID() {
+    public Rental getRental() {
+        return rental;
+    }
+
+    public void setRental(Rental rental) {
+        this.rental = rental;
+    }
+    
+    
+
+    public int getID() {
         return ID;
     }
 
@@ -76,7 +94,7 @@ public class Customer  extends User {
         return expireDate;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
@@ -131,6 +149,21 @@ public class Customer  extends User {
     public void viewRentalHistory(){
         
     }
+    public static Customer Signup(){
+        String Fname,Lname,Username,password,Email;
+        System.out.println("enter your first and last name");
+        Fname=input1.next();
+        Lname=input1.next();
+        System.out.println("enter username ");
+        Username=input1.next();
+        System.out.println("enter password");
+        password=input1.next();
+        System.out.println("enter email");
+        Email=input1.next();
+         
+        Customer newUser=new Customer();
+        return newUser;
+   }
 
     @Override
     public String toString() {
