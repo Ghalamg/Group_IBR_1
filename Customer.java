@@ -15,8 +15,6 @@ public class Customer  extends User {
     public Customer() {
     }
     
-    
-
     public Customer(int ID, String region, String city, String district, String street, int buildingNo, int postNo, int CVV, long cardNum, Date expireDate) {
         this.ID = ID;
         this.region = region;
@@ -52,8 +50,6 @@ public class Customer  extends User {
         this.rental = rental;
     }
     
-    
-
     public int getID() {
         return ID;
     }
@@ -171,4 +167,3 @@ public class Customer  extends User {
     }
     
 } //End of class
-
