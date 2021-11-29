@@ -19,37 +19,6 @@ public class User {
        Email=this.Email;
   
    }
-   
-//   public static int login(String username,String password){
-//        for(int i=0;i<user.length;i++){
-//            if(user[i].getUserName()==username&&user[i].getPassword()==password){
-//                return 1;
-//            }
-//            else if(user[i].getUserName()==username&&user[i].getPassword()!=password){
-//                return 2;
-//                
-//            }
-//           
-//           
-//        }
-//        return 0;
-//    }
-   
- /*  public static User Signup(){
-        String Fname,Lname,Username,password,Email;
-        System.out.println("enter your first and last name");
-        Fname=input1.next();
-        Lname=input1.next();
-        System.out.println("enter username ");
-        Username=input1.next();
-        System.out.println("enter password");
-        password=input1.next();
-        System.out.println("enter email");
-        Email=input1.next();
-         
-        User newUser=new User();
-        return newUser;
-   }*/
 
     public void setFname(String Fname) {
         this.Fname = Fname;
