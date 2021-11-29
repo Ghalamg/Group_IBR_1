@@ -1,16 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package myrental;
 
 import static myrental.MyRental.input1;
-//import static myrental.MyRental.user;
+import static myrental.MyRental.user;
 
+/**
+ *
+ * @author danii
+ */
+//a class for all users (costumer,manager,service provider)
 public class User {
-    
+    //user information
  private String Fname,Lname,UserName,password,Email;
    
    public User(){
        
    }
-   
+   //constructor
    public User(String Fname,String Lname,String UserName,String password,String Email){
        Fname=this.Fname;
        Lname=this.Lname;
@@ -19,23 +29,9 @@ public class User {
        Email=this.Email;
   
    }
-   
-//   public static int login(String username,String password){
-//        for(int i=0;i<user.length;i++){
-//            if(user[i].getUserName()==username&&user[i].getPassword()==password){
-//                return 1;
-//            }
-//            else if(user[i].getUserName()==username&&user[i].getPassword()!=password){
-//                return 2;
-//                
-//            }
-//           
-//           
-//        }
-//        return 0;
-//    }
-   
- /*  public static User Signup(){
+
+   //method to read new users information creat a new user object and return it to main.
+   public static User Signup(){
         String Fname,Lname,Username,password,Email;
         System.out.println("enter your first and last name");
         Fname=input1.next();
@@ -49,7 +45,7 @@ public class User {
          
         User newUser=new User();
         return newUser;
-   }*/
+   }
 
     public void setFname(String Fname) {
         this.Fname = Fname;
@@ -90,12 +86,8 @@ public class User {
     public String getEmail() {
         return Email;
     }
-
-    @Override
-    public String toString() {
-        return  Fname + " "+Lname +" "+  UserName +" "+password  + " "+ Email ;
-    }
    
    
     
-} //End of class
+}
+
