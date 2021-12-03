@@ -282,7 +282,10 @@ public class Customer  extends User {
             System.out.println("This method is not available yet! Select different method");
             makePayment(Id);
         }
-         System.out.println("----------------------------------------------------");
+        System.out.println("----------------------------------------------------");
+        System.out.println("rental added successfly!!!");
+        System.out.println("----------------------------------------------------");
+
       
        
         
