@@ -376,16 +376,20 @@ public class MyRental {
             chooseCar();
             Rental editrental = new Rental(start, end, region1, branch1, city1, car[carNum], custID);
             customer[custID].setRental(editrental);
-
+             System.out.println("----------------------------------------------------");
+             System.out.println("rental edited successfly!!!");
+              System.out.println("----------------------------------------------------");
         } else if (edit == 2) {
             System.out.println("----------------------------------------------------");
             System.out.println("please choose which rental you want to remove:");
             System.out.println("----------------------------------------------------");
             EditSummary();
             System.out.print("Please write the number of rental here:");
-
             int choice = input1.nextInt();
             removeRental();
+             System.out.println("----------------------------------------------------");
+            System.out.println("rental removed successfly!!!");
+             System.out.println("----------------------------------------------------");
         }
         while (edit > 2) {
             System.out.println("Invalid number enter again please:");
