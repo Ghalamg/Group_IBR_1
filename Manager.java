@@ -34,6 +34,9 @@ public class Manager  extends User {
         
     }
      
+     public void addService(){
+         
+     }
       public void deleteService(){
         
     }
@@ -50,5 +53,6 @@ public class Manager  extends User {
     public String toString() {
         return "Manager{" + "branch=" + branch + '}';
     }
-    
+        
+        
 } //End of class
