@@ -238,11 +238,17 @@ public class Customer  extends User {
         System.out.println("                    Payment ");
         System.out.println("----------------------------------------------------");
         System.out.println();
+        //menu of the payment method
         System.out.println("Select payment method: \n"
         + "1- Credit card \n"
         + "2- Apple pay (not implemented) \n"
         + "3- Cash (not implemented)");
+        //the customer only can do pay by Credit card because the another payment methods are not implemented yet
         int choice = input1.nextInt();
+        //if the customer choose Credit card he must fill this information:
+        //1-card number
+        //2-card expiry date
+        //3-CVV number 
         if(choice==1){
             System.out.println();
         System.out.println("Enter card number: (no spaces between numbers)");
@@ -254,10 +260,12 @@ public class Customer  extends User {
        customer[Id].setCardNum(cardnumber);
        customer[Id].setExpireDate(expirydate);
        customer[Id].setCVV(cvv);
+        //if customer choose the payment by Apple pay or cash this statment will apear 
         }else{
             System.out.println("This method is not available yet! Select different method");
             makePayment(Id);
         }
+        //otherwise 
          System.out.println();
          System.out.println("   Payment successful !");
          System.out.println("----------------------------------------------------");
