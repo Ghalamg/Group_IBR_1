@@ -23,10 +23,7 @@ public class MyRental {
     static services service = new services();
     static  Rental rental = null;
 
-    /**
-     * @param args the command line arguments
-     * @throws java.io.FileNotFoundException
-     */
+    
     public static void main(String[] args) throws FileNotFoundException {
 
         //File with users to fill in database
@@ -126,7 +123,8 @@ public class MyRental {
         } //End of if/else
 
     } //End of ApplicationOpener method
-
+     
+    //Home menu method
     public static int homeMenu() {
 
         //Home Menu
@@ -137,13 +135,16 @@ public class MyRental {
         System.out.println("----------------------------------------------------");
         System.out.println("              Home Menu              ");
         System.out.println("----------------------------------------------------");
-        
+         
+        //home menu proccesses
         System.out.println("1-View profile (not implmented)\n"
                 + "2-Make rental\n"
                 + "3-Services provided by the application\n"
                 + "4-Edit or remove rentals\n"
                 + "5-Log out ");
         System.out.println();
+        
+        //user must choose one of the proccesses in Home menu 
         System.out.println("Please enter your choice :");
         menuChoice = input1.nextInt();
         System.out.println();
@@ -158,7 +159,7 @@ public class MyRental {
     } // End of homeMenu method
 
    
-
+    // method to add informations of cars from file to array of cars
     public static void carsDatabase(File cars, Scanner input) {
 
         //read 3 cars information from file and store in cars array of object
