@@ -2,10 +2,12 @@ package myrental;
 
 public class Car {
     
+   
     private String company, name, year, color, plateNum, type;
     private boolean availability;
     private double price;
 
+ 
     public Car() {
     }
 
@@ -19,6 +21,8 @@ public class Car {
         this.availability = availability;
         this.price = price;
     }
+
+
 
     public String getCompany() {
         return company;
@@ -68,6 +72,8 @@ public class Car {
         this.plateNum = plateNum;
     }
 
+
+
     public boolean isAvailability() {
         return availability;
     }
@@ -83,6 +89,7 @@ public class Car {
     public void setPrice(double price) {
         this.price = price;
     }
+
 
     @Override
     public String toString() {
