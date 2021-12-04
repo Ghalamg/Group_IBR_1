@@ -21,14 +21,7 @@ public class serviceProvider extends User {
         this.insurranceNum = insurranceNum;
     }
 
-    /*public serviceProvider(String branch, String serviceType, Date serviceDate, long insurranceNum, String Fname, String Lname, String UserName, String password, String Email) {
-        super(Fname, Lname, UserName, password, Email);
-        this.branch = branch;
-        this.serviceType = serviceType;
-        this.serviceDate = serviceDate;
-        this.insurranceNum = insurranceNum;
-    }*/
-
+   
     public String getBranch() {
         return branch;
     }
