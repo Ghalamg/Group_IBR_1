@@ -1,6 +1,7 @@
 package myrental;
 
 import java.util.Date;
+import static myrental.MyRental.input1;
 
 public class Rental {
     
@@ -10,7 +11,25 @@ public class Rental {
     private int custID;
     private Manager manager;
     private services service;
+    /*
+    -startingdate: String
+    -endingdate: String
+    -region: String
+    -branch: String
+    -city: String
+    -car: Car
+    custID: int
+    -manager:Manager
+    -service: services
+    
+    
+    */
 
+    public Rental() {
+    }
+
+    
+    
     public Rental(String Startingdate, String endingDate, String region,String branch, String city, Car car, int custID) {
         this.Startingdate = Startingdate;
         this.endingDate = endingDate;
@@ -112,22 +131,27 @@ public class Rental {
         return manager;
     }
     
-    public boolean makeRental(){
-        return true;
-    }
-    
-    public void editRent(){
-        
-    }
-    
-    public void makepayment(){
-        
-    }
-    
-    public void requestService(){
-        
-    }
+   
 
+    public void  removeRental() {
+      
+        System.out.println();
+       
+        System.out.println("Are you sure you want to remove rental? (YES/NO)");
+        String choice = input1.next();
+        if (choice.equalsIgnoreCase("Yes")) {
+            System.out.println();
+            System.out.println("Rental is successfully removed, hope to see you again !");
+        } else if (choice.equalsIgnoreCase("No")) {
+            //EditRental();
+        } else {
+            System.out.println("Wrong selection, Try again");
+            removeRental();
+        }
+        
+       
+    }// End of removeRental method
+    
     @Override
     public String toString() {
         return "Rental{" + "Startingdate=" + Startingdate + ", endingDate=" + endingDate + ", region=" + region + ", city=" + city + ", car=" + car + ", customer=" + custID + ", manager=" + manager + '}';
