@@ -1,7 +1,7 @@
 package myrental;
 
 import static myrental.MyRental.input1;
-//import static myrental.MyRental.user;
+
 
 public class User {
     
@@ -19,6 +19,7 @@ public class User {
        Email=this.Email;
   
    }
+   
 
     public void setFname(String Fname) {
         this.Fname = Fname;
