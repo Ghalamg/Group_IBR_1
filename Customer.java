@@ -1,15 +1,19 @@
 package myrental;
 
+import java.io.File;
 import java.util.Date;
+import java.util.Scanner;
 import static myrental.MyRental.customer;
 import static myrental.MyRental.input1;
 
 public class Customer  extends User {
     
-    private String fName,lName,username,password,email,cardNum;
-            //,region,city,district,street;
+    private String fName,lName,username,password,email,cardNum,region,city,district,street;
+    private int buildingNo, postalNo;
+    
+            
     private int CVV,ID;
-           // buildingNo, postNo, ;
+          
     
     private String expireDate;
     private Rental rental;
@@ -105,29 +109,7 @@ public class Customer  extends User {
         return ID;
     }
 
-    /*public String getRegion() {
-        return region;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getDistrict() {
-        return district;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public int getBuildingNo() {
-        return buildingNo;
-    }
-
-    public int getPostNo() {
-        return postNo;
-    }*/
+    
 
     public int getCVV() {
         return CVV;
@@ -144,30 +126,7 @@ public class Customer  extends User {
     public void setID(int ID) {
         this.ID = ID;
     }
-/*
-    public void setRegion(String region) {
-        this.region = region;
-    }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public void setBuildingNo(int buildingNo) {
-        this.buildingNo = buildingNo;
-    }
-
-    public void setPostNo(int postNo) {
-        this.postNo = postNo;
-    }*/
 
     public void setCVV(int CVV) {
         this.CVV = CVV;
@@ -178,16 +137,29 @@ public class Customer  extends User {
     }
 
     public void setExpireDate(String expireDate) {
+        
         this.expireDate = expireDate;
     }
+      //this metho reads 3 customers from file and store in users array of Customer object
+    public  void customerDatabase(File customers, Scanner input) {
+        int i = 0;
+        while (input.hasNext()) {
+            customer[i] = new Customer();
+            customer[i].setID(i);
+            customer[i].setfName(input.next());
+            customer[i].setlName(input.next());
+            customer[i].setUsername(input.next());
+            customer[i].setPassword(input.next());
+            customer[i].setEmail(input.next());
+
+            i++;
+
+        } //End of while loop
+
+    } //End of CustomerDatabase method
     
-   /* public void displayInfo(){
-        
-    }
     
-    public void editProfile(){
-        
-    }*/
+   
     
     public boolean addPaymentInfo(long cardNum, Date expireDate, int CVV){
         return true;
@@ -211,6 +183,7 @@ public class Customer  extends User {
         Email=input1.next();
          
         Customer newUser=new Customer(Fname,Lname,Username,password,Email);
+        System.out.println();
         System.out.println("sign-up succesful ");
         login();
         return newUser;
@@ -228,9 +201,11 @@ public class Customer  extends User {
         password = input1.next();
 
         if (searchCustomer(username, password) == true) {
+            System.out.println();
             System.out.println("login succes \n");
 
         } else if (searchCustomer(username, password) == false) {
+            System.out.println();
             System.out.println("username or password is incorrect, try again");
             login();
 
@@ -257,10 +232,11 @@ public class Customer  extends User {
     } //End of searchUser method
 
     public void makePayment(int Id){
-        //cardnum, cvv , exp date,
+       
         
-         System.out.println("----------------------------------------------------");
-        System.out.println("    Step 6: Payment ");
+        System.out.println("----------------------------------------------------");
+        System.out.println("                    Payment ");
+        System.out.println("----------------------------------------------------");
         System.out.println();
         System.out.println("Select payment method: \n"
         + "1- Credit card \n"
@@ -282,11 +258,13 @@ public class Customer  extends User {
             System.out.println("This method is not available yet! Select different method");
             makePayment(Id);
         }
-        System.out.println("----------------------------------------------------");
-        System.out.println("rental added successfly!!!");
-        System.out.println("----------------------------------------------------");
-
-      
+         System.out.println();
+         System.out.println("   Payment successful !");
+         System.out.println("----------------------------------------------------");
+         System.out.println();
+         System.out.println();
+         System.out.println("Thank you for choosing us ! Enjoy your ride");
+         
        
         
      }
@@ -295,6 +273,6 @@ public class Customer  extends User {
     public String toString() {
         return "Customer{ id:" +ID+ ", first name: " + fName + ", last name: " + lName + ", username: " + username + ", password: " + password + ", email: " + email + '}';
     }
+   
     
 } //End of class
-
